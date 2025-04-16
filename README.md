@@ -20,7 +20,7 @@ OBS: Cada funcionalidade abaixo só pode ser dada como concluída caso esteja ab
 - [ ] Edicão de dados
 - [ ] Remoção da conta
 
-2. Gestão de Tickets
+3. Gestão de Tickets
 - [ ] Criação
 - [ ] Edição
 - [ ] Remoção
@@ -28,7 +28,7 @@ OBS: Cada funcionalidade abaixo só pode ser dada como concluída caso esteja ab
 - [ ] Listagem com filtros
 - [ ] Paginação
 
-3. Gestão de Permissões
+4. Gestão de Permissões
 - [ ] Adicionar
 - [ ] Editar informações não fixas
 - [ ] Atribuição de permissões a cargos
@@ -36,7 +36,7 @@ OBS: Cada funcionalidade abaixo só pode ser dada como concluída caso esteja ab
 - [ ] Paginação
 - [ ] Alinhar com as funcionalidades(autorização)
 
-4. Gestão de Cargos
+5. Gestão de Cargos
 - [ ] Criação 
 - [ ] Edição 
 - [ ] Remoção
