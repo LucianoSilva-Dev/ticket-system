@@ -1,5 +1,13 @@
 import z from 'zod';
 
+export const tokenResponse = z.object({
+  token: z.string(),
+});
+
+export const userRegisterResponse = z.object({
+  message: z.string(),
+});
+
 export const getTokenAuthBodyValidation = z.object({
   email: z
     .string({ message: 'o campo email precisa ser uma string.' })

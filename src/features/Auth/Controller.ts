@@ -1,5 +1,10 @@
-import type { Controller } from '../../shared/Types';
-import type { getTokenAuthBody, registerAuthBody } from './Types';
+import type { Controller, GenericErrorResponse, SchemaValidationErrorResponse } from '../../shared/Types';
+import type {
+  getTokenAuthBody,
+  registerAuthBody,
+  TokenResponse,
+  UserRegisterResponse,
+} from './Types';
 import { AuthService } from './Service';
 
 export const AuthController: Controller = {
@@ -9,10 +14,15 @@ export const AuthController: Controller = {
       reply,
     );
     if (!response.auth) {
-      return reply.status(401).send({ error: 'Invalid credentials' });
+      const genericErrorResponse: GenericErrorResponse = {
+        error: 'Invalid credentials',
+      };
+      return reply.status(401).send(genericErrorResponse);
     }
-
-    return reply.status(200).send({ token: response.token });
+    const tokenResponse: TokenResponse = {
+      token: response.token as string,
+    };
+    return reply.status(200).send(tokenResponse);
   },
 
   register: async (request, reply) => {
@@ -20,11 +30,17 @@ export const AuthController: Controller = {
       request.body as registerAuthBody,
     );
     if (!response.success) {
+      const genericErrorResponse: GenericErrorResponse = {
+        error: response.error as string,
+      };
       return reply
         .status(response.statusCode as number)
-        .send({ error: response.error });
+        .send(genericErrorResponse);
     }
 
-    return reply.status(201).send({ message: response.message });
+    const userRegisterResponse: UserRegisterResponse = {
+      message: response.message as string,
+    };
+    return reply.status(201).send(userRegisterResponse);
   },
 };

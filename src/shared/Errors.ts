@@ -1,14 +1,6 @@
 import type { ResponseSerializationError } from "fastify-type-provider-zod";
 import type { FastifySchemaValidationError } from "fastify/types/schema";
 
-export type ValidationErrorResponse = {
-  errors: string[];
-};
-
-export type GenericErrorResponse = {
-  error: string;
-};
-
 abstract class CustomError extends Error {
   constructor(public message: string, public statusCode: number) {
     super(message);

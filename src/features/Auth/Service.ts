@@ -4,11 +4,10 @@ import { AuthModel } from './Model';
 import crypto from 'bcryptjs';
 import type { getTokenAuthBody, registerAuthBody } from './Types';
 
-
 export const AuthService = {
   getToken: async (userCredentials: getTokenAuthBody, reply: FastifyReply) => {
     const { email, password } = userCredentials;
-    const user = await AuthModel.findOne({ email});
+    const user = await AuthModel.findOne({ email });
     if (!user) {
       return { auth: false, token: null };
     }
