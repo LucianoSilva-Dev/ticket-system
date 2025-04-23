@@ -14,11 +14,14 @@ OBS: Cada funcionalidade abaixo só pode ser dada como concluída caso esteja ab
 - [ ] Login de usuários 
 - [ ] Registro de novos usuários
 
-2. Gestão de funcionários
-- [ ] Visualização
-- [ ] Paginação
-- [ ] Edicão de dados
-- [ ] Remoção da conta
+2. Gestão de Organização
+- [ ] Criar
+- [ ] Remover
+- [ ] Visualizar + paginacao
+- [ ] Passar gestão?
+- [ ] Adicionar funcionario (usuario)
+- [ ] Remover funcionario
+- [ ] Visualizar funcionários
 
 3. Gestão de Tickets
 - [ ] Criação
@@ -28,8 +31,7 @@ OBS: Cada funcionalidade abaixo só pode ser dada como concluída caso esteja ab
 - [ ] Listagem com filtros
 - [ ] Paginação
 
-4. Gestão de Permissões
-- [ ] Adicionar
+4. Gestão de Permissões (fixo para qualquer org)
 - [ ] Editar informações não fixas
 - [ ] Atribuição de permissões a cargos
 - [ ] Listagem
@@ -44,5 +46,9 @@ OBS: Cada funcionalidade abaixo só pode ser dada como concluída caso esteja ab
 - [ ] Atribuição de cargos aos usuários
 - [ ] Listagem
 - [ ] Paginação
+
+6. Gestão da conta
+- [ ] Editar informações
+- [ ] Excluir conta
 
 ---
